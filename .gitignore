@@ -1,0 +1,10 @@
+*.pyc
+*.swp
+*.egg-info
+__pycache__
+.tox
+.nox
+.idea
+.venv
+venv
+

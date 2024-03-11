@@ -1,0 +1,25 @@
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+include = 'src/.*\.py$|tests/.*\.py$|setup\.py$'
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = [
+    "D", # pydocstyle
+    "E", # pycodestyle
+    "F", # pyflakes
+    "UP", # pyupgrade
+]
+ignore = ["D301", "D413"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
