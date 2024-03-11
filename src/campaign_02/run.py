@@ -2,13 +2,13 @@ from pathlib import Path
 from typing import Optional
 
 import submitit
+from blueetl.campaign.config import SimulationCampaign
 from bluepysnap.circuit_ids import CircuitNodeIds
 from bluepysnap.frame_report import FrameReport
 from bluepysnap.simulation import Simulation
 from bluepysnap.spike_report import SpikeReport
-from common.utils import L, clean_slurm_env, run_analysis, wait_for_slurm
 
-from blueetl.campaign.config import SimulationCampaign
+from common.utils import L, clean_slurm_env, run_analysis, wait_for_slurm
 
 DEFAULT_SLURM_ARGS = {
     "slurm_account": "proj30",

@@ -1,13 +1,13 @@
 from pathlib import Path
 from typing import Optional
 
+from blueetl.campaign.config import SimulationCampaign
 from bluepysnap.circuit_ids import CircuitNodeIds
 from bluepysnap.frame_report import FrameReport
 from bluepysnap.simulation import Simulation
 from bluepysnap.spike_report import SpikeReport
-from common.utils import L, run_analysis
 
-from blueetl.campaign.config import SimulationCampaign
+from common.utils import L, run_analysis
 
 
 def _get_ids(

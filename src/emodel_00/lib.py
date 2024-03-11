@@ -4,9 +4,10 @@ from functools import cached_property
 from pathlib import Path
 from typing import Any
 
-from common.utils import L, isolated, load_json
 from joblib import Parallel, delayed
 from matplotlib import pyplot as plt
+
+from common.utils import L, isolated, load_json
 
 DEFAULT_CELL_TEMPLATE = "v6"
 DEFAULT_SIMULATION_TIMEOUT = 3600
