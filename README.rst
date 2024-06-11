@@ -42,7 +42,7 @@ The script directory should contain at least the following files:
         return {"outputs": []}
 
 - ``requirements.in`` (required): list of required packages to be installed in a virtualenv.
-- ``requirements.txt`` (required): frozen list of required packages, automatically generated from ``requirements.in`` with ``tox -e freeze`` (see below for more details).
+- ``requirements.txt`` (required): frozen list of required packages, automatically generated from ``requirements.in`` with ``tox run -e freeze`` (see below for more details).
 - ``modules.cfg`` (optional): module archive and list of modules to load.
   Example::
 
@@ -56,15 +56,15 @@ Automation
 
 - To generate or update ``requirements.txt`` for a specific analysis, replace ``analysis_00`` with the name of the desired subdirectory under ``src`` and run::
 
-    PACKAGE=analysis_00 tox -e freeze
+    PACKAGE=analysis_00 tox run -e freeze
 
 - To run tests for a specific analysis, replace ``analysis_00`` with the name of the desired subdirectory under ``src`` and run::
 
-    PACKAGE=analysis_00 tox -e test
+    PACKAGE=analysis_00 tox run -e test
 
 - To run a specific analysis, replace ``analysis_00`` with the name of the desired subdirectory under ``src`` and run::
 
-    PACKAGE=analysis_00 tox -e run analysis_config.json analysis_output.json
+    PACKAGE=analysis_00 tox run -e run -- analysis_config.json analysis_output.json
 
   Alternatively, if you already have setup a virtualenv, you can run::
 
@@ -76,8 +76,8 @@ Automation
 
 - To format the code with ``isort`` and ``black``, run::
 
-    tox -e format
+    tox run -e format
 
 - To check the code with ``isort`` and ``black``, run::
 
-    tox -e lint
+    tox run -e lint
